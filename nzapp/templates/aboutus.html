@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+
+
+<main id="main">
+
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+        <img src="{% static 'assets/img/VisaTo_Australia-logo-8A-final.jpg' %}" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+        <h2 style="font-weight: 600;">ABOUT US</h2>
+        <p class="font-italic">
+          Visa To New Zealand is a full-service immigration network firm based in New Zealand with satellite offices located in New York, Hawaii, Texas and Florida. We have offices worldwide in Canada, Egypt, India, Spain – Portugal, Greece, Cyprus, Ireland, Philippines, Australia, Germany and Denmark. We are a team composed of experienced immigration attorneys, financial advisors and legal experts who know every step of the U.S. immigration process from top to bottom.
+        </p>
+        <!-- <ul>
+          <li><i class="icofont-check-circled"></i> As a team, we strive to provide each and every client with a highly personalized legal strategy to ensure success in every one of our clients’ unique immigration goals.</li>
+          <li><i class="icofont-check-circled"></i> Our immigration attorneys have work experience in corporate and tax law and will make sure that every legal need or concern our clients bring to us is addressed in a timely and efficient manner.</li>
+          <li><i class="icofont-check-circled"></i> As a company, we are familiar that the different backgrounds of our clients require different needs. Our staff is fluent in a variety of languages including English, Spanish, Chinese, Hebrew, Tagalog, Hindi, Arabic and Portuguese.</li>
+        </ul> -->
+      </div>
+
+      <!-- <p>
+        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+        culpa qui officia deserunt mollit anim id est laborum
+      </p> -->
+      <div class="col-lg-12 order-1 order-lg-2" data-aos="fade-right">
+        <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+        <ul>
+          <li><i class="icofont-check-circled"></i> As a team, we strive to provide each and every client with a highly personalized legal strategy to ensure success in every one of our clients’ unique immigration goals.</li>
+          <li><i class="icofont-check-circled"></i> Our immigration attorneys have work experience in corporate and tax law and will make sure that every legal need or concern our clients bring to us is addressed in a timely and efficient manner.</li>
+          <li><i class="icofont-check-circled"></i> As a company, we are familiar that the different backgrounds of our clients require different needs. Our staff is fluent in a variety of languages including English, Spanish, Chinese, Hebrew, Tagalog, Hindi, Arabic and Portuguese.</li>
+        </ul>
+      </div>
+      <p class="font-italic">As a network firm, we value trust and communication over all else when it comes to building client relationships. We understand that each and every client’s primary goal is to make the United States your new home, either temporarily or permanently. We open up the world to you and give you the option of choosing a new home in Canada, Spain, Portugal, Greece, Cyprus, Ireland, Australia, New Zealand, Germany and Denmark.</p>
+      <p class="font-italic">So, once we take you on as a client we commit everything in our power to making sure that goal comes true.</p>
+      <p class="font-italic">Working with Visa To New Zealand ensures that you will have the best immigration representation possible. We will be available to you to solve any problems that may arise. If you want a Visa to Australia, contact us today and we will get started. Let us help guide you to your Dream.</p>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->
+
+<!-- ======= Why Us Section ======= -->
+<section >
+  <div style="padding-top: 10px;">
+    <div class="map" id="chartdiv" style="display: flex; width: 784px; height: 292px; margin:auto" width="784" height="292">
+    <!-- <div class="map" id="chartdiv"></div> -->
+  </div>
+</section><!-- End Why Us Section -->
+
+</main>
+
+<!-- MAPS -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="{% static 'assets/js/map.js' %}"></script>
+
+
+{% endblock %}

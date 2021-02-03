@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+
+
+<main id="main">
+
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="section-title">
+
+      <span style="color: black;">Contact Us</span>
+    </div>
+    <br><br>
+
+    <div class="row" data-aos="fade-up">
+      <div class="col-lg-6">
+
+        <div class="info-box mb-4">
+          <a href="https://goo.gl/maps/3kTATGiaVPJXAQHF9"><i class="bx bx-map"></i></a>
+          <h3>Our Address</h3>
+          <div class="">
+            <a href="https://goo.gl/maps/3kTATGiaVPJXAQHF9"><p>2267 Buttonbush C, Mississauga,</p>
+              <p>Ontario L5L 1C4, Canada</p></a>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="info-box  mb-4">
+          <a href="mailto:info@VisaToAustralia.com"><i class="bx bx-envelope"></i></a>
+
+          <h3>Email Us</h3>
+          <div class="">
+            <a href="mailto:info@VisaToAustralia.com"><p>info@VisaToNewzealand.com</p></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="info-box  mb-4">
+          <a href="tel:604-229-1353"><i class="bx bx-phone-call"></i></a>
+          <h3>Call Us</h3>
+          <div class="">
+            <a href="tel:604-229-1353"><p>604-229-1353</p></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row" data-aos="fade-up">
+
+      <div class="col-lg-6 ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.27085533965!2d-79.68175758463748!3d43.538395579125485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b43c6a25b7ae9%3A0x2dc845984f037505!2s2267%20Buttonbush%20Cres%2C%20Mississauga%2C%20ON%20L5L%201C4%2C%20Canada!5e0!3m2!1sen!2sin!4v1606324929783!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0; height: 100%; width: 100%" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+
+      <div class="col-lg-6">
+        <form method="POST">{% csrf_token %}
+          <div class="form-row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="text" data-msg="Please enter your name" />
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" name="phone" id="subject" placeholder="Phone Number" data-rule="minlen:4" data-msg="Please enter your mobile number" />
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-msg="Please enter your message" />
+            <div class="validate"></div>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+            <div class="validate"></div>
+          </div>
+          <!-- <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div> -->
+          <div class="text-center"><button class="submit1" type="submit">Send Message</button></div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Section -->
+
+</main>
+{% endblock %}
