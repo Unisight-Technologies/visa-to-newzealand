@@ -80,11 +80,11 @@
         <li><a href="{% url 'aboutus' %}">About Us</a></li>
         <li class="drop-down"><a href="#services">Services</a>
           <ul>
-            <li><a href="#">Student visa</a></li>
-            <li><a href="#">Working holiday visa</a></li>
-            <li><a href="#">Work visa</a></li>
-            <li><a href="#">Self employment visa</a></li>
-            <li><a href="#">Investing visa</a></li>
+            <li><a href="{% url 'studentvisa' %}">Student visa</a></li>
+            <li><a href="{% url 'holidayvisa' %}">Working holiday visa</a></li>
+            <li><a href="{% url 'workvisa' %}">Work visa</a></li>
+            <li><a href="{% url 'self-empvisa' %}">Self employment visa</a></li>
+            <li><a href="{% url 'investorvisa' %}">Investing visa</a></li>
           </ul>
         </li>
         <!-- <li><a href="#portfolio">Portfolio</a></li> -->
@@ -105,20 +105,6 @@
               <li>  <a href="#">Denmark</a> </li>
 
             </ul>
-            <!-- <li><a href="#">Drop Down 1</a></li>
-            <li class="drop-down"><a href="#">Deep Drop Down</a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-          </ul> -->
         </li>
         <li><a href="{% url 'contactus' %}">Contact Us</a></li>
 
@@ -151,8 +137,6 @@
             <div class="social-links mt-3">
               <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
             </div>
           </div>
         </div>
@@ -162,14 +146,12 @@
           <ul>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}">Home</a></li>
             <li><i class="bx bx-chevron-right"></i> <a href="{% url 'aboutus' %}">About Us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Student visa </a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Working holiday visa</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Work visa</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Self employment visa</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#"> Investing visa</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contactus' %}">Contact Us</a></li>
-             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li> -->
-             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'studentvisa' %}">Student visa </a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'holidayvisa' %}">Working holiday visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'workvisa' %}">Work visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'self-empvisa' %}">Self employment visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'investorvisa' %}"> Investing visa</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contactus' %}">Contact Us</a></li>             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li> -->             <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
            </ul>
          </div>
 

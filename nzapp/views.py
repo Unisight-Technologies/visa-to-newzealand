@@ -7,9 +7,18 @@ class Homepage(TemplateView):
 class Aboutpage(TemplateView):
     template_name= "aboutus.html"
 
+class Workpage(TemplateView):
+    template_name= "workvisa.html"
+class Studentpage(TemplateView):
+    template_name= "studentvisa.html"
+class Investorpage(TemplateView):
+    template_name= "investorvisa.html"
+class Holidaypage(TemplateView):
+    template_name= "holidayvisa.html"
+class Self_emp_page(TemplateView):
+    template_name= "self-empvisa.html"
 class Contactpage(TemplateView):
     template_name= "contactus.html"
-
     def post(self, request):
 
         form = request.POST

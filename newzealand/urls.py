@@ -21,5 +21,10 @@ urlpatterns = [
     path('', views.Homepage.as_view(),name="index"),
     path('aboutus/', views.Aboutpage.as_view(),name="aboutus"),
     path('contactus/', views.Contactpage.as_view(),name="contactus"),
+    path('workvisa/', views.Workpage.as_view(),name="workvisa"),
+    path('studentvisa/', views.Studentpage.as_view(),name="studentvisa"),
+    path('investorvisa/', views.Investorpage.as_view(),name="investorvisa"),
+    path('holidayvisa/', views.Holidaypage.as_view(),name="holidayvisa"),
+    path('self-empvisa/', views.Self_emp_page.as_view(),name="self-empvisa"),
     # path('refresh/', views.refresh, name='refresh')
 ]
