@@ -18,7 +18,9 @@ class Holidaypage(TemplateView):
 class Self_emp_page(TemplateView):
     template_name= "self-empvisa.html"
 class Entrepreneurpage(TemplateView):
-    template_name= "entrepreneurvisa.html"    
+    template_name= "entrepreneurvisa.html"
+class Essentialpage(TemplateView):
+    template_name= "ess_skill_visa.html"
 class Contactpage(TemplateView):
     template_name= "contactus.html"
     def post(self, request):

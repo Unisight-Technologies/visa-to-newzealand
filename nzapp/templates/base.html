@@ -11,7 +11,6 @@
   <meta content="" name="keywords">
 
 
-
   <!-- Favicons -->
   <link href="{% static 'assets/img/VisaTo_New Zealand-logo-8B-final.png' %}" rel="icon">
   <link href="{% static 'assets/img/VisaTo_New Zealand-logo-8B-final.png' %}" rel="apple-touch-icon">
@@ -82,11 +81,16 @@
         <li class="drop-down"><a href="#services">Services</a>
           <ul>
             <li><a href="{% url 'studentvisa' %}">Student visa</a></li>
-            <li><a href="{% url 'holidayvisa' %}">Working holiday visa</a></li>
-            <li><a href="{% url 'workvisa' %}">Work visa</a></li>
-            <li><a href="{% url 'self-empvisa' %}">Self employment visa</a></li>
-            <li><a href="{% url 'investorvisa' %}">Investor visa</a></li>
-            <li><a href="{% url 'entrepreneurvisa' %}">Entrepreneur visa</a></li>
+            <li class="drop-down"><a href="{% url 'workvisa' %}">Work visa</a>
+              <ul>
+                <li><a href="{% url 'holidayvisa' %}">Working holiday visa</a></li>
+                <li><a href="{% url 'ess_skill_visa' %}">Essential Skilled visa</a>
+              </ul></li>
+            <li class="drop-down"><a href="{% url 'self-empvisa' %}">Self employment visa</a>
+            <ul>
+              <li><a href="{% url 'investorvisa' %}">Investor visa</a></li>
+              <li><a href="{% url 'entrepreneurvisa' %}">Entrepreneur visa</a></li>
+            </ul></li>
           </ul>
         </li>
         <!-- <li><a href="#portfolio">Portfolio</a></li> -->

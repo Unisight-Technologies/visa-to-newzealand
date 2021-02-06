@@ -27,5 +27,6 @@ urlpatterns = [
     path('holidayvisa/', views.Holidaypage.as_view(),name="holidayvisa"),
     path('self-empvisa/', views.Self_emp_page.as_view(),name="self-empvisa"),
     path('entrepreneurvisa/', views.Entrepreneurpage.as_view(),name="entrepreneurvisa"),
+    path('ess_skill_visa/', views.Essentialpage.as_view(),name="ess_skill_visa"),
     # path('refresh/', views.refresh, name='refresh')
 ]
