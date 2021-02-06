@@ -2,8 +2,160 @@
 {% load static %}
 {% block body_block %}
 
+<style media="screen">
+#age ,#lang ,#edu, #finance, #buisness, #bsteam, #istream{
+  display: none;
+}
+
+</style>
+<!-- ------------------MODALS START----------------------- -->
+<!-- Modal Workers-->
+
+<div class="modal fade" id="main_modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form name="score-form1">
+
+
+        <div class="form-group">
+
+          <b><label for="">Business experience </label></b><br>
+          <select class="modal-dropdown" name="age">
+            <option value="20">
+            3+ years of Relevant Self Employment
+            </option>
+            <option value="30">
+            5+ years of Relevant Self Employment
+            </option>
+            <option value="40">
+            10+ years of Relevant Self Employment
+            </option>
+            <option value="5">
+            3+ years of Other Self Employment
+            </option>
+            <option value="15">
+              5+ years of Other Self Employment
+            </option>
+            <option value="20">
+              10+ years of Other Self Employment
+            </option>
+            <option value="5">
+              5+ years of Relevant Senior Management Experience
+            </option>
+            <option value="10">
+              10+ years of Relevant Senior Management Experience
+            </option>
+          </select><br>
+
+          <!-- <span class="popuptext show" id="myPopup">
+            We only need your email to send you payment receipt.<br><br>
+            We won't be storing your email in our database.
+          </span> -->
+          <b><label for="">New full time employment creation</label></b>
+          <select class="modal-dropdown" name="language">
+            <option value="80">
+              10+ new full time positions for New Zealand citizens/residents
+            </option>
+            <option value="50">
+              5 new full time positions for New Zealand citizens/residents
+            </option>
+            <option value="30">
+              3 new full time positions for New Zealand citizens/residents
+            </option>
+            <option value="20">
+             2 new full time positions for New Zealand citizens/residents
+            </option>
+            <option value="10">
+            1 new full time positions for New Zealand citizens/residents
+            </option>
+
+          </select>
+
+
+        <b><label for="">Points for approved export business (based on annual turnover)</label></b><br>
+        <select class="modal-dropdown" name="education">
+          <option value="80">
+          NZ$ 1,000,000 plus turnover
+          </option>
+          <option value="60">
+          NZ$   750,000 plus turnover
+          </option>
+          <option value="40">
+            NZ$   500,000 plus turnover
+             </option>
+          <option value="30">
+           NZ$   400,000 plus turnover
+            </option>
+          <option value="20">
+          NZ$   300,000 plus turnover
+          </option>
+          <option value="10">
+          NZ$   200,000 plus turnover
+          </option>
+        </select><br><br>
+
+        <b><label for="">Unique or new products or services to New Zealand</label></b><br>
+        <select class="modal-dropdown" name="finance">
+          <option value="30">A credible business proposal that provides unique or new products or services to New Zealand or to a particular region.</option>
+        </select><br><br>
+
+        <b><label for="">Capital Investment (excluding working capital) </label></b><br>
+        <select class="modal-dropdown" name="buisness">
+          <option value="80">NZ$ 1,000,000</option>
+          <option value="60">NZ$  750,000</option>
+          <option value="50">NNZ$ 500,000</option>
+          <option value="30">NZ$  400,000</option>
+          <option value="20">NZ$  300,000</option>
+          <option value="10">NZ$  200,000</option>
+          <option value="0">less than NZ$  200,000</option>
+        </select><br><br>
+
+        <b><label for="">Points for Age </label></b><br>
+        <select class="modal-dropdown" name="bstream">
+          <option value="15">24 and unde</option>
+          <option value="20">25-29</option>
+          <option value="20">30-39</option>
+          <option value="20">40-49</option>
+          <option value="10">50-59</option>
+          <option value="0">60 and over</option>
+        </select><br><br>
+
+        <b><label for="">Bonus Points </label></b><br>
+        <select class="modal-dropdown" name="istream">
+          <option value="40">Business outside Auckland</option>
+          <!-- <option value="15">Not less than 7 years</option> -->
+        </select><br><br>
+
+      <button type="button" onclick="calculateScore1()" class="modal-btn">Calculate Now</button>
+
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+
 <main id="main">
 
+  <style>
+  table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+  }
+  </style>
 
 <section id="services" class="services">
   <div class="container">
@@ -89,10 +241,232 @@
   </section>
 </div>
 
-</section>
+<!-- Pie chart -->
+      <h2 style="text-centre"><b>Points table for Business Innovation and Investment (Provisional) visa (subclass 188)</b></h2>
+      <div class="row">
 
+          <div class="container1">
 
+            <div style="padding-top: 90px;">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
 
+          <div class="col">
+            <div class="container" style="margin-top: 50px; padding-right: 100px;" >
+              <div id="age">
+                <h1>Age</h1>
+                <table style>
+                  <tr>
+                    <th>Age</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>18–24 years</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>25–32 years</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>33–39 years</td>
+                    <td>25</td>
+                  </tr>
+                  <tr>
+                    <td>40–44 years</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>45–54 years</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>55 and older</td>
+                    <td>0</td>
+                  </tr>
+
+                </table>
+              </div>
+
+              <div id="lang">
+
+                <h1>English Language (Adaptability)</h1>
+                <table style>
+                  <tr>
+                    <th>English</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>Vocational English	</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>Proficient English</td>
+                    <td>10</td>
+                  </tr>
+                </table>
+
+              </div>
+
+              <div id="edu">
+                <h1>Educational Qualifications</h1>
+                <table style>
+                  <tr>
+                    <th>Qualifications</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>Trade certificate, diploma or bachelor degree by an Australian education institute; or a bachelor qualification recognised by an educational  institution of a recognised standard</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>A Bachelor degree in business, science or technology by an Australian institution; or a bachelor qualification in business, science or technology by an educational institution of a recognised standard</td>
+                    <td>10</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div id="finance">
+                <h1>Financial assets</h1>
+
+                <p>Net business and personal assets of you, your partner or you and your partner combined in each of the preceding 2 fiscal years of at least:</p>
+                <table style>
+                  <tr>
+                    <th>Description</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>Not less than AUD800,000</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>Not less than AUD1.3 million	</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>Not less than AUD1.8 million</td>
+                    <td>25</td>
+                  </tr>
+                  <tr>
+                    <td>Not less than AUD2.25 million</td>
+                    <td>35</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div id="buisness">
+
+                <h1>Business turnover</h1>
+                <p>You had an ownership interest in one or more main businesses that had an annual turnover in at least 2 of the 4 fiscal years immediately before the time of invitation to apply for the visa:</p>
+
+                <table style>
+                  <tr>
+                    <th>Description</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>Not less than AUD500,000</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>Not less than AUD1 million</td>
+                    <td>15</td>
+                  </tr>
+                  <tr>
+                    <td>Not less than AUD1.5 million</td>
+                    <td>25</td>
+                  </tr>
+                  <tr>
+                    <td>Not less than AUD2 million</td>
+                    <td>35</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div id="bstream">
+
+                <h1>Buisness Innovation stream only</h1>
+
+                <p>You have held 1 or more main businesses before you were invited to apply for the visa for:</p>
+                <table style>
+                  <tr>
+                    <th>Description</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>Not less than 4 years within the preceding 5 years</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Not less than 7 years within the preceding 8 year</td>
+                    <td>15</td>
+                  </tr>
+
+                </table>
+              </div>
+
+              <div id="istream">
+
+                <h1>Investor stream only</h1>
+
+                <p>Immediately before the time of application you held eligible investments of at least AUD100,000 held for:</p>
+                <table style>
+                  <tr>
+                    <th>Description</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>Not less than 4 years</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>Not less than 7 years</td>
+                    <td>15</td>
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+          </div>
+
+            </div>
+            <div class="text-center">
+    <br>
+    <!-- <button onclick="showModal1()" class="express-btn3 modal-btn" type="button">Calculate your score!</button> -->
+  </div>
+
+  <div class="container">
+    <div class="text-center performance3">
+    <br><h1>Your Performance:</h1>
+    </div>
+    <div class="row">
+
+        <div class="container1">
+          <div class="resultChart">
+            <canvas id="myChart1"></canvas>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="text-center" style="padding-top: 70px;">
+            <br><h3 class="insert-here1-1"></h3>
+            <h4 class="insert-here1-2"></h4>
+          </div>
+        </div>
+
+  </div>
+</div>
+ </section>
 
 </main>
+
+  <script type="text/javascript">
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+        })
+      </script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
 {% endblock %}

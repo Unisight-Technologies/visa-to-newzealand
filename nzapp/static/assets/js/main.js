@@ -195,3 +195,8 @@
   });
 
 })(jQuery);
+
+function showModal1(){
+  $('#main_modal1').modal();
+
+}
