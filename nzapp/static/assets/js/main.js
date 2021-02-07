@@ -200,3 +200,8 @@ function showModal1(){
   $('#main_modal1').modal();
 
 }
+
+function showModal2(){
+  $('#result_modal1').modal();
+
+}

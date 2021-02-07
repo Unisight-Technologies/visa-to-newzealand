@@ -1,0 +1,419 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+
+<style media="screen">
+#Skilled1 ,#Qual1, #Workexp1, #Partner1{
+  display: none;
+}
+
+</style>
+
+
+<!-- ------------------MODALS START----------------------- -->
+<!-- Modal Workers-->
+
+<div class="modal fade" id="result_modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Compute your score!</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form name="score-form2">
+
+
+        <div class="form-group">
+
+          <b><label for="">Age</label></b><br>
+          <select class="modal-dropdown" name="age1">
+            <option value="0">
+            under 20 years
+            </option>
+            <option value="30">
+            20–39 years
+            </option>
+            <option value="20">
+            40–44 years
+            </option>
+            <option value="10">
+            45–49 years
+            </option>
+            <option value="5">
+            55-55 years
+            </option>
+            <option value="0">
+            56 years and older
+            </option>
+          </select><br>
+
+          <!-- <span class="popuptext show" id="myPopup">
+            We only need your email to send you payment receipt.<br><br>
+            We won't be storing your email in our database.
+          </span> -->
+          <b><label for="">Skilled employment</label></b>
+          <select class="modal-dropdown" name="skilled1">
+            <option value="50">
+            I'm already working in skilled employment in New Zealand
+            </option>
+            <option value="50">
+              I've been offered skilled employment in New Zealand
+            </option>
+
+          </select>
+
+
+        <b><label for="">Qualifications</label></b><br>
+        <select class="modal-dropdown" name="qual1">
+          <option value="0">
+          I do not have a recognized qualification
+          </option>
+          <option value="40">
+          I have a recognized qualification- Level 3-6
+          </option>
+          <option value="50">
+          I have a recognized qualification- Level 7-8
+             </option>
+          <option value="70">
+          I have a recognized qualification- Level 9-10 postg
+            </option>
+
+        </select><br><br>
+
+        <b><label for="">Work experience</label></b><br>
+        <select class="modal-dropdown" name="workexp1">
+          <option value="0">I have no skilled work experience</option>
+        <option value="10">I have skilled work experience of 2 years</option>
+        <option value="20">I have skilled work experience of 4 years</option>
+        <option value="30">I have skilled work experience of 6 years</option>
+        <option value="40">I have skilled work experience of 8 years</option>
+        <option value="50">I have skilled work experience of 10 years and more</option>
+      </select>
+
+        <br><br>
+
+        <b><label for="">Partner</label></b><br>
+        <select class="modal-dropdown" name="partner1">
+          <option value="0">My partner speaks English at the same level that I'm required to</option>
+          <option value="0">My partner is working in skilled employment, or has been offered skilled employment, in New Zealand</option>
+          <option value="20">My partner speaks English at the same level that I'm required to</option>
+          <option value="20">My partner has a recognised qualification</option>
+          <option value="20">My partner is working in skilled employment, or has been offered skilled employment, in New Zealand</option>
+          <option value="10">My partner speaks English at the same level that I'm required to</option>
+        </select><br><br>
+
+      <button type="button" onclick="calculateScore2()" class="modal-btn">Calculate Now</button>
+
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<main id="main">
+
+  <section id="one" class="wrapper style1">
+
+    <section id="specials" class="specials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <span style="color: #000">ESSENTIAL SKILLS WORK VISA</span><br><br>
+          <img style="width: 35%" src="/static/assets/img/20210109_174758_0001.png" alt="">
+
+          <!-- <p style="color: black; font-size: 3em; font-family:Open Sans, sans-serif;">STUDENT & TRAINING VISA</p> -->
+          </div>
+          <br>
+
+          <div class="section-title-details">
+            <h4></h4>
+            <p>The Essential Skills Work visa is for skilled workers whose job is listed  on the Essential Skills in Demand List. It allows you to work in the  country for up to five years, but the duration may depend on your skill  level. For a foreigner to fill a job position with this visa, the employer  must prove that they could not hire a New Zealander.
+</p>
+           </div>
+<br>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-toggle="tab" href="#tab-1">How to Apply</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tab-2">Who Qualifies as a Skilled or Highly Skilled Worker  in New Zealand?
+</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-10 details order-2 order-lg-1">
+                    <h3>HOW TO APPLY</h3>
+                    <p>To apply for an Essential Skills work visa, you will need the following  documents:
+</p>
+                    <ul>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i>A job offer for a full-time position, and a copy of your employment agreement.</li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i>Your employer to prove that a New Zealander could not be hired for the position.</li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i> An “Employer Supplementary Form” describing your job offer (completed by employer). </li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i>A document proving the necessary qualifications (original or certified copy).</li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i> Occupational registration (if applicable).</li>
+
+                    </ul>
+                    <p>You also cannot be subject to a stand-down period (the period when you  are required to spend 12 consecutive months outside of New Zealand). </p>
+                    <p>Although this type of visa only intends to fill temporary skill gaps, you may  still apply for residence if you gain enough points to qualify for residence  under the Skilled Migrant Category. </p>
+                    </div>
+                  <!-- <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="assets/img/sunsweet.jpeg" alt="" class="img-fluid">
+                </div> -->
+              </div>
+            </div>
+            <div class="tab-pane" id="tab-2">
+              <div class="row">
+                <div class="col-lg-10 details order-2 order-lg-1">
+                  <h3>Who Qualifies as a Skilled or Highly Skilled Worker in New Zealand? </h3>
+
+                  <!-- <p>The Skillselect is designed to assess the skills of applicants under a point-based system so that immigrants with the right skills can be selected. <br></p> -->
+                    <p>Your qualifications, skills, and experience will fall on one of five  categories defined by the <b>Australian and New Zealand Standard  Classification of Occupations (ANZSCO)</b>.</p>
+                    <p>You are considered a skilled worker if: </p>
+                    <ul class="">
+                      <li class="font-italic"> <i class="icofont-check-circled"></i>Your occupation is listed in ANZSCO as level 1, 2 or 3, it matches  the description for that occupation, and you are paid more than 25  NZD (16 USD) an hour or more (or the equivalent annually).</li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i>Your occupation is listed in ANZSCO as level 4 or 5, it matches the  description for that occupation, and you are paid more than 50  NZD (24 USD) an hour or more (or the equivalent annually).</li>
+                      <li class="font-italic"> <i class="icofont-check-circled"></i>Your occupation has no corresponding description, but you are paid  50 NZD (24 USD) an hour or more (or the equivalent annually). </li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+
+
+<!-- some error -->
+
+    </div>
+
+  </div>
+</section>
+
+</section>
+
+<!-- Pie chart -->
+<div style="text-align:center">
+
+  <h2><b>Points Indicator for Skilled Migrant </b></h2>
+    <p>The points indicator is a guide only. Only an immigration officer can award you points during their assessment of your visa application. </p>
+    <p>It shows the points that will be in effect on and after 28 August 2017.</p>
+
+  </div>
+      <div class="row">
+
+          <div class="container1">
+
+            <div style="padding-top: 90px;">
+              <canvas id="ess_skilled"></canvas>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="container" style="margin-top: 50px; padding-right: 100px;" >
+              <div id="Age1">
+                <h1>Age</h1>
+                <table style>
+                  <tr>
+                    <th>Age</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>under 20 years</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>20–39 years</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>40–44 years</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>45–49 years</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>50 -55 years</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>56 and older</td>
+                    <td>0</td>
+                  </tr>
+
+                </table>
+              </div>
+
+              <div id="Skilled1">
+
+                <h1>Skilled employment</h1>
+                <table style>
+                  <tr>
+                    <th>Employment</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>I'm already working in skilled employment in New Zealand</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>I've been offered skilled employment in New Zealand</td>
+                    <td>50</td>
+                  </tr>
+                </table>
+
+              </div>
+
+              <div id="Qual1">
+                <h1>Qualifications</h1>
+                <table style>
+                  <tr>
+                    <th>Qualifications</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <th>I do not have a recognized qualification</th>
+                    <th>0</th>
+                  </tr>
+                  <tr>
+                    <td>I have a recognized qualification- Level 3-6</td>
+                    <td>40</td>
+                  </tr>
+                  <tr>
+                    <td>I have a recognized qualification- Level 7-8</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>I have a recognized qualification- Level 9-10 postg</td>
+                    <td>70</td>
+                  </tr>
+                </table>
+              </div>
+
+              <div id="Workexp1">
+                <h1>Work experience</h1>
+                <table style>
+                  <tr>
+                    <th>Experience</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <th>I have no skilled work experience</th>
+                    <th>0</th>
+                  </tr>
+                  <tr>
+                    <td>I have skilled work experience of 2 years</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>I have skilled work experience of 4 years</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>I have skilled work experience of 6 years</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>I have skilled work experience of 8 years</td>
+                    <td>40</td>
+                  </tr>
+                  <tr>
+                    <td>I have skilled work experience of 10 and more years</td>
+                    <td>50</td>
+                  </tr>
+                </table>
+
+                <p>If you're invited to apply for residence, you'll need to show you have skilled work experience. You can do this by providing documents that show:</p>
+                <ul>
+                  <li>the work that you did</li>
+                  <li>the dates you did the work</li>
+                  <li>how many hours a week you worked (on average)</li>
+                  <li>the contact details for your employer or employers</li>
+                </ul>
+              </div>
+
+
+              <div id="Partner1">
+
+                <h1>Partner</h1>
+
+                <table style>
+                  <tr>
+                    <th>Description</th>
+                    <th>Points</th>
+                  </tr>
+                  <tr>
+                    <td>My partner speaks English at the same level that I'm required to</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>My partner is working in skilled employment, or has been offered skilled employment, in New Zealand</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>My partner speaks English at the same level that I'm required to</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>My partner has a recognised qualification</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>My partner is working in skilled employment, or has been offered skilled employment, in New Zealand</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>My partner speaks English at the same level that I'm required to</td>
+                    <td>10</td>
+
+                  </tr>
+
+                </table>
+              </div>
+            </div>
+          </div>
+
+            </div>
+            <div class="text-center">
+    <br>
+     <button onclick="showModal2()" class="express-btn2 modal-btn" type="button">Calculate your score!</button>
+  </div>
+
+  <div class="container">
+    <div class="text-center performance2">
+    <br><h1>Your Performance:</h1>
+    </div>
+    <div class="row">
+
+        <div class="container1">
+          <div class="resultChart">
+            <canvas id="score_chart1"></canvas>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="text-center" style="padding-top: 70px;">
+            <br><h3 class="insert-here2-1"></h3>
+            <h4 class="insert-here2-2"></h4>
+          </div>
+        </div>
+
+  </div>
+</div>
+
+
+</main>
+{% endblock %}
