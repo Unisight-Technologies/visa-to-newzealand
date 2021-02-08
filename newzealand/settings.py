@@ -28,7 +28,7 @@ DEBUG = False
 if(socket.gethostname()=="DESKTOP-NPQN816","Ananya-PC"):
     DEBUG = True
 
-ALLOWED_HOSTS = ['www.visatoireland.com']
+ALLOWED_HOSTS = ['www.visatonewzealand.com','visatonewzealand.com','127.0.0.1']
 
 
 # Application definition
