@@ -1,0 +1,552 @@
+.resize {
+  max-width:100%;
+}
+/*
+.resultChart{
+  display: none;
+} */
+
+#myPopup{
+  display:none;
+}
+
+.insert-here1-1, .insert-here1-2, .insert-here2-1, .insert-here2-2, .insert-here3-1, .insert-here3-2 {
+  padding: 10px;
+}
+
+.performance1, .performance2, .performance3{
+  display: none;
+}
+
+.express-btn, .submit1, .modal-btn{
+  background: #cc1616;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  /* border: 3px solid black; */
+}
+
+.express-btn:hover{
+  background: #e82d2d;
+}
+
+.modal-btn:hover{
+  background: #e82d2d;
+}
+
+#main{
+  margin-top: 100px;
+}
+
+.goog-te-gadget-icon{
+  display:none;
+}
+
+
+#google_translate_element{
+  margin-right: 20px;
+  background-color: #cc1616;
+}
+
+.goog-te-gadget-simple{
+  background-color: #cc1616;
+}
+
+.goog-te-banner{
+overflow-x: auto !important;
+
+}
+.modal-dropdown{
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  #google_translate_element{
+    width: 100px;
+    overflow-x: auto !important;
+
+  }
+}
+
+.responsive{
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive{
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+/* PIECHART START */
+.container1 {
+  width: 50%;
+  margin-left: 10%;
+}
+
+@media only screen and (max-width: 700px) {
+  .container1{
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* PIECHART ENDS */
+
+.shadow {
+  box-shadow: 5px 10px #888888;
+  color: black;
+}
+
+.style1 {
+  background-color: ghostwhite;
+  color: black;
+  border-radius: 1.5em;
+}
+
+#pad {
+  padding: 5%;
+}
+
+.container-nav{
+  box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+}
+
+.nav-menu a{
+  color: black;
+}
+
+.nav-menu li:hover > a{
+  color: white;
+}
+.nav-menu li:hover{
+  background-color: #212529;
+}
+
+.nav-inspiring p{
+  color: black;
+}
+
+.logo1{
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 150px;
+}
+
+@media (max-width: 600px){
+.logo1{
+  width: 100px;
+}
+}
+
+/* @media (max-width: 600px){
+.nav-inspiring{
+  width: 100%;
+}
+} */
+
+.nav-right{
+  float: right;
+}
+
+/* .nav-menu{
+  margin-right: 5%;
+} */
+
+#header.header-scrolled{
+  background: white;
+}
+
+@media (max-width: 992px){
+#header {
+    top: 0;
+    padding-bottom: 0;
+    background: white;
+}
+}
+
+.mobile-nav-toggle i{
+  color: black;
+  vertical-align: sub;
+}
+
+@media (max-width: 600px){
+.nav-inspiring {
+    display: none;
+}
+}
+
+
+
+/* for cards */
+
+
+
+
+.animated {
+  visibility: visible;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.slow {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+.animated.fadeIn {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.odd-about-card{
+    background: linear-gradient(to left, #24243e, #302b63, #0f0c29);
+    padding: 30px;
+    border-radius: 30px;
+    color: white;
+}
+
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#footer{
+  background: #212529;
+}
+
+#footer .footer-top .footer-info{
+  background: #dedede;
+  color: black;
+}
+
+.footer-logo{
+  width: 200px;
+}
+
+#topbar .contact-info a, #topbar{
+  color: white;
+}
+
+#topbar{
+  background: #212529 ;
+}
+
+#contact{
+  background: white;
+}
+
+.icon-box{
+  background: white;
+}
+
+.nav-menu > ul > li{
+  padding: 15px 10px;
+  margin-left: 0px;
+}
+
+.btn-get-started {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 10px 28px;
+    transition: 0.5s;
+    border: 2px solid #000;
+    color: #fff;
+    background-color: black;
+}
+
+#more .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 10px 28px;
+    transition: 0.5s;
+    border: 2px solid #212529;
+    color: #212529;
+    background-color: transparent;
+}
+
+#score .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 10px 28px;
+    transition: 0.5s;
+    border: 2px solid #212529;
+    color: white;
+    background-color: #212529;
+}
+
+#score .btn-get-started:hover {
+    display: inline-block;
+    background-color: black;
+    border-color: white;
+    color: white;
+}
+
+.icon-box:hover #score .btn-get-started{
+background-color: black;
+}
+
+
+
+.btn-get-started:hover {
+    background: #212529;
+    border-color: #212529;
+    color: white;
+}
+
+.fa-hand-point-right{
+  color: #212529
+}
+
+#services{
+  background: white;
+}
+
+
+.blog-box{
+    margin-top: 50px;
+    padding: 15px;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    border: 2px #DDDDF0 solid;
+    border-radius: 5px;
+}
+
+.blog-img{
+  width: 70%;
+  float: right;
+  border-radius: 5px;
+}
+
+#blogs{
+  background: white;
+}
+
+@media (max-width: 600px) {
+
+  .blog-para{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .blog-head{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .blog-author{
+    display: none;
+  }
+}
+
+
+
+/* nominee page card */
+#stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
+
+.container-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 250px;
+  height: 250px;
+  background-image: linear-gradient(#0062cc, #dc3545);
+  box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+
+  border-radius: 75px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+}
+
+.container-card:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+.container-card:hover::before, .container-card:hover::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #FDA8CF;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.container-card:hover:after {
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}
+
+
+
+
+.cont-text {
+  color: white;
+}
+
+/* pie chart */
+
+/* MAP */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  width: 100%;
+  height: 98vh;
+}
+
+
+@media only screen and (min-width: 700px) {
+  .map{
+    width: 100%;
+    margin-left: 0;
+    height: 90%;
+  }
+}

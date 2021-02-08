@@ -1,6 +1,8 @@
 django
 gunicorn
+pillow
+django-cleanup
+beautifulsoup4
 whitenoise
 django-environ
-beautifulsoup4
 requests

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+import socket
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -23,9 +24,11 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = '!!924ic&0i6$3e0z4wior@&6ly-t9(^^t$(mt*d-njqi80k=fd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+if(socket.gethostname()=="DESKTOP-NPQN816","Ananya-PC"):
+    DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.visatoireland.com']
 
 
 # Application definition
@@ -120,3 +123,4 @@ USE_TZ = True
 import os.path
 STATIC_URL = '/static/'
 STATIC_FILES_DIRS = (os.path.join('static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
