@@ -2,7 +2,7 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["age", "lang", "edu", "finance", "buisness","bstream","istream"],
+    labels: ["experience", "employment", "export", "excluding working capital", "age","bonus"],
     datasets: [{
       backgroundColor: [
         "#2ecc71",
@@ -11,11 +11,11 @@ var myChart = new Chart(ctx, {
         "#9b59b6",
         "#f1c40f",
         "#e74c3c",
-        "#e83e8c",
+        // "#e83e8c",
         // "#20c997",
         // "#6c757d",
       ],
-      data: [25,10,10,35,25,15,15]
+      data: [25,25,10,25,20,15]
     }]
   },
   weight: 150
@@ -31,9 +31,9 @@ canvas.onclick = function(evt){
         var idx = activePoints[0]['_index'];
 
         var label = chartData.labels[idx];
-        if(label == "age"){
+        if(label == "experience"){
 
-          $('#lang').css('display', 'none');
+          $('#employment').css('display', 'none');
           $('#edu').css('display', 'none');
           $('#finance').css('display', 'none');
           $('#buisness').css('display', 'none');
@@ -41,13 +41,13 @@ canvas.onclick = function(evt){
           $('#istream').css('display', 'none');
           // $('#qualify').css('display', 'none');
           // $('#endro').css('display', 'none');
-          $('#age').slideToggle();
+          $('#experience').slideToggle();
 
         }
 
-        if(label == "lang"){
+        if(label == "employment"){
 
-          $('#age').css('display', 'none');
+          $('#experience').css('display', 'none');
           $('#edu').css('display', 'none');
           $('#finance').css('display', 'none');
           $('#buisness').css('display', 'none');
@@ -55,14 +55,14 @@ canvas.onclick = function(evt){
           $('#istream').css('display', 'none');
           // $('#qualify').css('display', 'none');
           // $('#endro').css('display', 'none');
-          $('#lang').slideToggle();
+          $('#employment').slideToggle();
 
         }
 
         if(label == "edu"){
 
-          $('#lang').css('display', 'none');
-          $('#age').css('display', 'none');
+          $('#employment').css('display', 'none');
+          $('#experience').css('display', 'none');
           $('#finance').css('display', 'none');
           $('#buisness').css('display', 'none');
           $('#bstream').css('display', 'none');
@@ -75,9 +75,9 @@ canvas.onclick = function(evt){
 
         if(label == "finance"){
 
-          $('#lang').css('display', 'none');
+          $('#employment').css('display', 'none');
           $('#edu').css('display', 'none');
-          $('#age').css('display', 'none');
+          $('#experience').css('display', 'none');
           $('#buisness').css('display', 'none');
           $('#bstream').css('display', 'none')
           $('#istream').css('display', 'none');
@@ -89,10 +89,10 @@ canvas.onclick = function(evt){
 
         if(label == "buisness"){
 
-          $('#lang').css('display', 'none');
+          $('#employment').css('display', 'none');
           $('#edu').css('display', 'none');
           $('#finance').css('display', 'none');
-          $('#age').css('display', 'none');
+          $('#experience').css('display', 'none');
           $('#bstream').css('display', 'none');
           $('#istream').css('display', 'none');
           // $('#qualify').css('display', 'none');
@@ -103,62 +103,16 @@ canvas.onclick = function(evt){
 
         if(label == "bstream"){
 
-          $('#lang').css('display', 'none');
+          $('#employment').css('display', 'none');
           $('#edu').css('display', 'none');
           $('#finance').css('display', 'none');
           $('#buisness').css('display', 'none');
-          $('#age').css('display', 'none');
+          $('#experience').css('display', 'none');
           $('#istream').css('display', 'none');
-          // $('#qualify').css('display', 'none');
-          // $('#endro').css('display', 'none');
           $('#bstream').slideToggle();
 
         }
-
-        if(label == "istream"){
-
-          $('#lang').css('display', 'none');
-          $('#edu').css('display', 'none');
-          $('#finance').css('display', 'none');
-          $('#buisness').css('display', 'none');
-          $('#bstream').css('display', 'none');
-          $('#age').css('display', 'none');
-          // $('#qualify').css('display', 'none');
-          // $('#endro').css('display', 'none');
-          $('#istream').slideToggle();
-
-        }
-
-        // if(label == "qualify"){
-        //
-        //   $('#lang').css('display', 'none');
-        //   $('#edu').css('display', 'none');
-        //   $('#finance').css('display', 'none');
-        //   $('#buisness').css('display', 'none');
-        //   $('#bstream').css('display', 'none');
-        //   $('#istream').css('display', 'none');
-        //   $('#age').css('display', 'none');
-        //   $('#endro').css('display', 'none');
-        //   $('#qualify').slideToggle();
-        //
-        // }
-        //
-        // if(label == "endro"){
-        //
-        //   $('#lang').css('display', 'none');
-        //   $('#edu').css('display', 'none');
-        //   $('#finance').css('display', 'none');
-        //   $('#buisness').css('display', 'none');
-        //   $('#bstream').css('display', 'none');
-        //   $('#istream').css('display', 'none');
-        //   $('#qualify').css('display', 'none');
-        //   $('#age').css('display', 'none');
-        //   $('#endro').slideToggle();
-        //
-        // }
       }
-
-    // => activePoints is an array of points on the canvas that are at the same position as the click event.
 };
 
 var scored = 0;
@@ -180,44 +134,29 @@ var myChart1 = new Chart(ctx, {
 });
 
 function calculateScore1(){
-  var age = document.forms["score-form1"]["age"].value;
-  var language = document.forms["score-form1"]["language"].value;
-  var education = document.forms["score-form1"]["education"].value;
+  var experience = document.forms["score-form1"]["experience"].value;
+  var employment = document.forms["score-form1"]["employment"].value;
+  var edu = document.forms["score-form1"]["edu"].value;
   var finance = document.forms["score-form1"]["finance"].value;
   var buisness = document.forms["score-form1"]["buisness"].value;
   var bstream = document.forms["score-form1"]["bstream"].value;
   var istream = document.forms["score-form1"]["istream"].value;
-  // var qualify = document.forms["score-form1"]["qualify"].value;
-  // var endrosment= document.forms["score-form1"]["endrosment"].value;
 
 
-  var score = (Number(age)+Number(language)+Number(education)+Number(finance)+Number(buisness)+Number(bstream)+Number(istream))
+  var score = (Number(experience)+Number(employment)+Number(edu)+Number(finance)+Number(buisness)+Number(bstream)+Number(istream))
   scored = score;
 
 
   myChart1.data.labels.push("Your Marks ");
   myChart1.data.datasets[0].data.push(scored);
   myChart1.data.labels.push(" ");
-  myChart1.data.datasets[0].data.push(100-scored);
+  myChart1.data.datasets[0].data.push(120-scored);
   myChart1.update()
 
     $('#main_modal1').modal('hide');
     $('.insert-here1-1').text("YOUR SCORE: "+score+" pts");
     $('.insert-here1-2').text("CONGRATULATIONS, YOU HAVE PASSED THE TEST!");
     $('.insert-here1-1').css('background', '#06DB5E');
-
-
-  // else{
-  //   $('.insert-here-1').text("YOUR SCORE: "+score+" pts");
-  //   $('.insert-here-2').text("SORRY, YOU DID NOT PASS THE TEST.");
-  //   $('.insert-here-1').css('background', '#E74C3C');
-  //   $('.insert-here-1').css('color', 'white');
-  //
-  //
-  //
-  //
-  //
-  // }
   $('.express-btn1').css('display', 'none');
   $('.performance1').css('display', 'inherit');
 

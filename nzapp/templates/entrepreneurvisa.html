@@ -3,7 +3,7 @@
 {% block body_block %}
 
 <style media="screen">
-#age ,#lang ,#edu, #finance, #buisness, #bsteam, #istream{
+#experience ,#employment ,#edu, #finance, #buisness, #bsteam, #istream{
   display: none;
 }
 
@@ -27,7 +27,7 @@
         <div class="form-group">
 
           <b><label for="">Business experience </label></b><br>
-          <select class="modal-dropdown" name="age">
+          <select class="modal-dropdown" name="experience">
             <option value="20">
             3+ years of Relevant Self Employment
             </option>
@@ -59,7 +59,7 @@
             We won't be storing your email in our database.
           </span> -->
           <b><label for="">New full time employment creation</label></b>
-          <select class="modal-dropdown" name="language">
+          <select class="modal-dropdown" name="employment">
             <option value="80">
               10+ new full time positions for New Zealand citizens/residents
             </option>
@@ -80,7 +80,7 @@
 
 
         <b><label for="">Points for approved export business (based on annual turnover)</label></b><br>
-        <select class="modal-dropdown" name="education">
+        <select class="modal-dropdown" name="edu">
           <option value="80">
           NZ$ 1,000,000 plus turnover
           </option>
@@ -110,7 +110,7 @@
         <select class="modal-dropdown" name="buisness">
           <option value="80">NZ$ 1,000,000</option>
           <option value="60">NZ$  750,000</option>
-          <option value="50">NNZ$ 500,000</option>
+          <option value="50">NZ$ 500,000</option>
           <option value="30">NZ$  400,000</option>
           <option value="20">NZ$  300,000</option>
           <option value="10">NZ$  200,000</option>
@@ -119,7 +119,7 @@
 
         <b><label for="">Points for Age </label></b><br>
         <select class="modal-dropdown" name="bstream">
-          <option value="15">24 and unde</option>
+          <option value="15">24 and under</option>
           <option value="20">25-29</option>
           <option value="20">30-39</option>
           <option value="20">40-49</option>
@@ -164,7 +164,7 @@
     <section id="specials" class="specials">
       <div class="section-title">
             <span style="color: #000">Entrepreneur Work Visa</span><br><br>
-            <img style="width: 35%" src="/static/assets/img/20210109_180731_0000.png" alt="">
+            <img style="width: 35%" src="/static/assets/img/entrepreneur.jpeg" alt="">
 
 
           </div>
@@ -242,7 +242,7 @@
 </div>
 
 <!-- Pie chart -->
-  <h2 style="text-align:center"><b>Points table for Business Innovation and Investment (Provisional) visa (subclass 188)</b></h2>
+  <h2 style="text-align:center"><b>Points indicator for Entrepreneur Work Visa</b></h2>
       <div class="row">
 
           <div class="container1">
@@ -254,55 +254,75 @@
 
           <div class="col">
             <div class="container" style="margin-top: 50px; padding-right: 100px;" >
-              <div id="age">
-                <h1>Age</h1>
+              <div id="experience">
+                <h1>Buisness Experience</h1>
                 <table style>
                   <tr>
-                    <th>Age</th>
+                    <th>Buisness Experience</th>
                     <th>Points</th>
                   </tr>
                   <tr>
-                    <td>18–24 years</td>
+                    <td>3+ years of Relevant Self Employment</td>
                     <td>20</td>
                   </tr>
                   <tr>
-                    <td>25–32 years</td>
+                    <td>5+ years of Relevant Self Employment</td>
                     <td>30</td>
                   </tr>
                   <tr>
-                    <td>33–39 years</td>
-                    <td>25</td>
+                    <td>10+ years of Relevant Self Employment</td>
+                    <td>40</td>
                   </tr>
                   <tr>
-                    <td>40–44 years</td>
-                    <td>20</td>
+                    <td>3+ years of Other Self Employment</td>
+                    <td>5</td>
                   </tr>
                   <tr>
-                    <td>45–54 years</td>
+                    <td>5+ years of Other Self Employment</td>
                     <td>15</td>
                   </tr>
                   <tr>
-                    <td>55 and older</td>
-                    <td>0</td>
+                    <td>10+ years of Other Self Employment</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>5+ years of Relevant Senior Management Experience</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>  10+ years of Relevant Senior Management Experience</td>
+                    <td>10</td>
                   </tr>
 
                 </table>
               </div>
 
-              <div id="lang">
+              <div id="employment">
 
-                <h1>English Language (Adaptability)</h1>
+                <h1>New full time employment creation</h1>
                 <table style>
                   <tr>
-                    <th>English</th>
+                    <th>New full time employment creation</th>
                     <th>Points</th>
                   </tr>
                   <tr>
-                    <td>Vocational English	</td>
-                    <td>5</td>
+                    <td>10+ new full time positions for New Zealand citizens/residents	</td>
+                    <td>80</td>
                   </tr>
                   <tr>
-                    <td>Proficient English</td>
+                    <td>5 new full time positions for New Zealand citizens/residents</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <td>3 new full time positions for New Zealand citizens/residents</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>2 new full time positions for New Zealand citizens/residents</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>1 new full time positions for New Zealand citizens/residents</td>
                     <td>10</td>
                   </tr>
                 </table>
@@ -310,103 +330,132 @@
               </div>
 
               <div id="edu">
-                <h1>Educational Qualifications</h1>
+                <h1>Points for approved export business (based on annual turnover)</h1>
                 <table style>
                   <tr>
-                    <th>Qualifications</th>
+                    <th>Export buisness</th>
                     <th>Points</th>
                   </tr>
                   <tr>
-                    <td>Trade certificate, diploma or bachelor degree by an Australian education institute; or a bachelor qualification recognised by an educational  institution of a recognised standard</td>
-                    <td>5</td>
+                    <td>NZ$ 1,000,000 plus turnover</td>
+                    <td>80</td>
                   </tr>
                   <tr>
-                    <td>A Bachelor degree in business, science or technology by an Australian institution; or a bachelor qualification in business, science or technology by an educational institution of a recognised standard</td>
+                    <td>NZ$   750,000 plus turnover</td>
+                    <td>60</td>
+                  </tr>
+                  <tr>
+                    <td>NZ$   500,000 plus turnover</td>
+                    <td>40</td>
+                  </tr>
+                  <tr>
+                    <td> NZ$   400,000 plus turnover</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>NZ$   300,000 plus turnover</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>NZ$ 200,000 plus turnover</td>
                     <td>10</td>
                   </tr>
                 </table>
               </div>
 
               <div id="finance">
-                <h1>Financial assets</h1>
+                <h1>Excluding Working Capital</h1>
 
-                <p>Net business and personal assets of you, your partner or you and your partner combined in each of the preceding 2 fiscal years of at least:</p>
+                <!-- <p>Net business and personal assets of you, your partner or you and your partner combined in each of the preceding 2 fiscal years of at least:</p> -->
                 <table style>
                   <tr>
-                    <th>Description</th>
+                    <th>Excluding Working Capital</th>
                     <th>Points</th>
                   </tr>
                   <tr>
-                    <td>Not less than AUD800,000</td>
-                    <td>5</td>
+                    <td>NZ$ 1,000,000</td>
+                    <td>80</td>
                   </tr>
                   <tr>
-                    <td>Not less than AUD1.3 million	</td>
-                    <td>15</td>
+                    <td>NZ$  750,000	</td>
+                    <td>60</td>
                   </tr>
                   <tr>
-                    <td>Not less than AUD1.8 million</td>
-                    <td>25</td>
+                    <td>NZ$ 500,000</td>
+                    <td>50</td>
                   </tr>
                   <tr>
-                    <td>Not less than AUD2.25 million</td>
-                    <td>35</td>
+                    <td>NZ$  400,000</td>
+                    <td>30</td>
+                  </tr>
+                  <tr>
+                    <td>NZ$  300,000</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>NZ$  200,000</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>less than NZ$  200,000</td>
+                    <td>0</td>
                   </tr>
                 </table>
               </div>
 
               <div id="buisness">
 
-                <h1>Business turnover</h1>
-                <p>You had an ownership interest in one or more main businesses that had an annual turnover in at least 2 of the 4 fiscal years immediately before the time of invitation to apply for the visa:</p>
+                <h1>Age</h1>
+                <!-- <p>You had an ownership interest in one or more main businesses that had an annual turnover in at least 2 of the 4 fiscal years immediately before the time of invitation to apply for the visa:</p> -->
 
                 <table style>
                   <tr>
-                    <th>Description</th>
+                    <th>Age</th>
                     <th>Points</th>
                   </tr>
                   <tr>
-                    <td>Not less than AUD500,000</td>
-                    <td>5</td>
-                  </tr>
-                  <tr>
-                    <td>Not less than AUD1 million</td>
+                    <td>24 and under</td>
                     <td>15</td>
                   </tr>
                   <tr>
-                    <td>Not less than AUD1.5 million</td>
-                    <td>25</td>
+                    <td>25-29</td>
+                    <td>20</td>
                   </tr>
                   <tr>
-                    <td>Not less than AUD2 million</td>
-                    <td>35</td>
+                    <td>30-39</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>40-49</td>
+                    <td>20</td>
+                  </tr>
+                  <tr>
+                    <td>50-59</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>60 and over</td>
+                    <td>0</td>
                   </tr>
                 </table>
               </div>
 
               <div id="bstream">
 
-                <h1>Buisness Innovation stream only</h1>
 
-                <p>You have held 1 or more main businesses before you were invited to apply for the visa for:</p>
                 <table style>
                   <tr>
-                    <th>Description</th>
+                    <th>Bonus</th>
                     <th>Points</th>
                   </tr>
                   <tr>
-                    <td>Not less than 4 years within the preceding 5 years</td>
-                    <td>10</td>
+                    <td>Business outside Auckland</td>
+                    <td>40</td>
                   </tr>
-                  <tr>
-                    <td>Not less than 7 years within the preceding 8 year</td>
-                    <td>15</td>
-                  </tr>
-
                 </table>
               </div>
 
-              <div id="istream">
+              <!-- <div id="istream">
 
                 <h1>Investor stream only</h1>
 
@@ -426,14 +475,14 @@
                   </tr>
 
                 </table>
-              </div>
+              </div> -->
             </div>
           </div>
 
             </div>
             <div class="text-center">
     <br>
-     <button onclick="showModal1()" class="express-btn3 modal-btn" type="button">Calculate your score!</button> 
+     <button onclick="showModal1()" class="express-btn3 modal-btn" type="button">Calculate your score!</button>
   </div>
 
   <div class="container">
