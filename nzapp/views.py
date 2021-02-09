@@ -1,5 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import View, TemplateView
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+
+from . import models
+# from .models import News
+from . import mailHandler
+# import requests
+from django.contrib import messages
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 class Homepage(TemplateView):
     template_name= "index.html"
