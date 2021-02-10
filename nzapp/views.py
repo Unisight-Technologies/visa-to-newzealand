@@ -2,11 +2,12 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import View, TemplateView
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from . import scrap_news
 
 from . import models
-# from .models import News
+from .models import News
 from . import mailHandler
-# import requests
+import requests
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
@@ -54,3 +55,39 @@ class Contactpage(TemplateView):
         mailHandler.sendMailToVisaToCanada(name, email, phone, subject, message)
         messages.success(request, "Your query has been successfully submitted. We will get back to you soon.")
         return redirect("contactus")
+
+class Blog(View):
+    def get(self, request, *args, **kwargs):
+
+        render_news = models.News.objects.all()
+        context = {
+            'news': render_news
+        }
+
+        return render(request, 'blogs.html', context=context)
+
+@login_required(login_url='/admin/')
+def refresh(request):
+    # if(models.News.objects.all().exists()):
+    #     for i in range(0, 5):
+    #         old_news = models.News.objects.all()[0]
+    #         old_news.delete()
+
+    scrapper = scrap_news.Scrapper()
+
+    for i in range(0,5):
+        news = models.News.objects.create(
+        	title=scrapper.titles[i],
+        	date=scrapper.dates[i],
+        	description=scrapper.descriptions[i],
+        	url=scrapper.urls[i]
+            )
+        news.save()
+        print(scrapper.urls[i])
+
+
+
+        new_news = models.News.objects.get(title=scrapper.titles[i])
+
+
+    return HttpResponse('News fetched successfully!')
