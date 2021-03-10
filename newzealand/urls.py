@@ -28,6 +28,7 @@ urlpatterns = [
     path('self-empvisa/', views.Self_emp_page.as_view(),name="self-empvisa"),
     path('entrepreneurvisa/', views.Entrepreneurpage.as_view(),name="entrepreneurvisa"),
     path('ess_skill_visa/', views.Essentialpage.as_view(),name="ess_skill_visa"),
+    path('coming_soon/', views.Comingpage.as_view(),name="coming_soon"),
     path('blogs/', views.Blog.as_view(), name="blogs"),
     path('refresh/', views.refresh, name='refresh'),
 

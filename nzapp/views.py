@@ -31,6 +31,8 @@ class Entrepreneurpage(TemplateView):
     template_name= "entrepreneurvisa.html"
 class Essentialpage(TemplateView):
     template_name= "ess_skill_visa.html"
+class Comingpage(TemplateView):
+    template_name= "coming_soon.html"
 class Contactpage(TemplateView):
     template_name= "contactus.html"
     def post(self, request):
