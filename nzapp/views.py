@@ -35,6 +35,17 @@ class Comingpage(TemplateView):
     template_name= "coming_soon.html"
 class Contactpage(TemplateView):
     template_name= "contactus.html"
+class Spain_Comingpage(TemplateView):
+    template_name= "spain_coming_soon.html"
+
+class Denmark_Comingpage(TemplateView):
+    template_name= "Denmark_coming_soon.html"
+
+class Italy_Comingpage(TemplateView):
+    template_name= "Italy_coming_soon.html"
+
+class Greece_Comingpage(TemplateView):
+    template_name= "Greece_coming_soon.html"
     def post(self, request):
 
         form = request.POST
