@@ -29,7 +29,7 @@ SECRET_KEY = '!!924ic&0i6$3e0z4wior@&6ly-t9(^^t$(mt*d-njqi80k=fd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-if(socket.gethostname()=="DESKTOP-NPQN816","Ananya-PC"):
+if(socket.gethostname()=="DESKTOP-NPQN816","Ananya-PC","DESKTOP-CDJ0JAR"):
     DEBUG = True
 
 ALLOWED_HOSTS = ['www.visatonewzealand.com','visatonewzealand.com','127.0.0.1']

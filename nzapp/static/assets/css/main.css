@@ -132,7 +132,7 @@ overflow-x: auto !important;
   color: white;
 }
 .nav-menu li:hover{
-  background-color: #212529;
+  background-color: #00247d;
 }
 
 .nav-inspiring p{
@@ -248,7 +248,7 @@ overflow-x: auto !important;
 }
 
 #footer{
-  background: #212529;
+  background: #00247d;
 }
 
 #footer .footer-top .footer-info{
@@ -265,7 +265,7 @@ overflow-x: auto !important;
 }
 
 #topbar{
-  background: #212529 ;
+  background: #00247d ;
 }
 
 #contact{
@@ -304,8 +304,8 @@ overflow-x: auto !important;
     display: inline-block;
     padding: 10px 28px;
     transition: 0.5s;
-    border: 2px solid #212529;
-    color: #212529;
+    border: 2px solid #00247d;
+    color: #00247d;
     background-color: transparent;
 }
 
@@ -318,9 +318,9 @@ overflow-x: auto !important;
     display: inline-block;
     padding: 10px 28px;
     transition: 0.5s;
-    border: 2px solid #212529;
+    border: 2px solid #00247d;
     color: white;
-    background-color: #212529;
+    background-color: #00247d;
 }
 
 #score .btn-get-started:hover {
@@ -337,13 +337,13 @@ background-color: black;
 
 
 .btn-get-started:hover {
-    background: #212529;
-    border-color: #212529;
+    background: #00247d;
+    border-color: #00247d;
     color: white;
 }
 
 .fa-hand-point-right{
-  color: #212529
+  color: #00247d
 }
 
 #services{

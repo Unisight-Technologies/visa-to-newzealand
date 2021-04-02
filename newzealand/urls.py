@@ -30,11 +30,11 @@ urlpatterns = [
     path('ess_skill_visa/', views.Essentialpage.as_view(),name="ess_skill_visa"),
     path('coming_soon/', views.Comingpage.as_view(),name="coming_soon"),
     path('blogs/', views.Blog.as_view(), name="blogs"),
-    path('spain_coming_soon/',views.Spain_Comingpage.as_view(),name="spain_coming_soon"),
-    path('Denmark_coming_soon/',views.Denmark_Comingpage.as_view(),name="Denmark_coming_soon"),
     path('Italy_coming_soon/',views.Italy_Comingpage.as_view(),name="Italy_coming_soon"),
-    path('Greece_coming_soon/',views.Greece_Comingpage.as_view(),name="Greece_comingsoon"),
     path('refresh/', views.refresh, name='refresh'),
-
+    path('givingitback/', views.Givingitback.as_view(),name="givingitback"),
+    path('disclaimer/', views.Disclaimer.as_view(),name="disclaimer"),
+    path('privacy_policy/', views.Privacypolicy.as_view(),name="privacy_policy"),
+    path('terms/', views.Terms.as_view(),name="terms"),
 
 ]
