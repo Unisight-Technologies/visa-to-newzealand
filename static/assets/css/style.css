@@ -391,7 +391,7 @@ animation: up-down 2s ease-in-out infinite alternate-reverse both;
   color: white;
 }
 
-.nav-menu > ul > li:hover, .nav-menu:active {
+.nav-menu > ul > li:hover {
   background:  #cc142b;
   color: white;
 }

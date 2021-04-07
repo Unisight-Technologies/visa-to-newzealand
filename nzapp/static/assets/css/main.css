@@ -131,9 +131,6 @@ overflow-x: auto !important;
 .nav-menu li:hover > a{
   color: white;
 }
-.nav-menu li:hover{
-  background-color: #00247d;
-}
 
 .nav-inspiring p{
   color: black;
