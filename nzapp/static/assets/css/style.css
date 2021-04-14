@@ -26,6 +26,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.visaimage{
+  width: 40%;
+}
+
+@media (max-width: 600px){
+  .visaimage{
+    width: 80%;
+  }
+  }
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
