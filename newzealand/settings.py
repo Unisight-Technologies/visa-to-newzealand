@@ -34,13 +34,8 @@ if(socket.gethostname()=="DESKTOP-NPQN816" or socket.gethostname()=="Ananya-PC" 
 
 ALLOWED_HOSTS = ['www.visatonewzealand.com','visatonewzealand.com','127.0.0.1']
 
-# SMTP EMAIL SETTINGS
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = env("EMAIL")
-EMAIL_HOST_PASSWORD = env("PASSWORD")
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+#Recaptch key
+GOOGLE_RECAPTCHA_SECRET_KEY = env('RECAPTCHA_KEY')
 
 # Application definition
 

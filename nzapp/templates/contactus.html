@@ -4,7 +4,8 @@
 
 
 <main id="main">
-
+<!-- Captcha -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
   <div class="container">
@@ -32,11 +33,11 @@
 
       <div class="col-lg-3 col-md-6">
         <div class="info-box  mb-4">
-          <a href="mailto:info@VisaToAustralia.com"><i class="bx bx-envelope"></i></a>
+          <a href="mailto:info@VisaToNewzealand.com"><i class="bx bx-envelope"></i></a>
 
           <h3>Email Us</h3>
           <div class="">
-            <a href="mailto:info@VisaToAustralia.com"><p>info@VisaToNewzealand.com</p></a>
+            <a href="mailto:info@VisaToNewzealand.com"><p>info@VisaToNewzealand.com</p></a>
           </div>
         </div>
       </div>
@@ -83,12 +84,38 @@
             <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
             <div class="validate"></div>
           </div>
+          <div class="form-group mt-3">
+            <!-- alert-messages for captcha -->
+              <div class="row login" style="    width: 100%;
+              text-align: center;
+              " class="row">
+              {% if messages %}
+              {% for message in messages %}
+              {% if message.tags == 'info' %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  {% else %}
+                  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert"></div>
+                  {% endif %}
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="background: transparent; border: 1px solid black;">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              {% endfor %}
+              {% endif %}
+              </div>
+            <!-- alert-messages-ends -->
+          </div>
+          <div class="form-group mt-3">
+            <div class="g-recaptcha" data-sitekey="{{SITE_KEY}}"></div>
+          </div>
           <!-- <div class="mb-3">
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your message has been sent. Thank you!</div>
           </div> -->
-          <div class="text-center"><button class="submit1" type="submit">Send Message</button></div>
+          <div class="text-center"><input 
+            class="submit1" value="Send Message" type="submit"></div>
         </form>
       </div>
 

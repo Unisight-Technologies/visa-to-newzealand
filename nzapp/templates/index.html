@@ -24,7 +24,22 @@
        <div class="container">
 
          <div class="carousel-caption">
-
+          <!-- alert-messages for captcha -->
+            <div class="row login" style="    width: 100%;
+            text-align: center;
+            " class="row">
+            {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="background: transparent; border: 1px solid black;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            {% endfor %}
+            {% endif %}
+            </div>
+            <!-- alert-messages-ends -->
            <h2 class="carousel-title animated" style="color: white";>Welcome to  New Zealand</h2>
            <!-- <h1>Welcome to Canada</h1> -->            <br>
 
