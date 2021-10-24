@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 import socket
 import environ
+import django_heroku
 env = environ.Env()
 # reading .env file
 environ.Env.read_env()
@@ -32,7 +33,7 @@ DEBUG = False
 if(socket.gethostname()=="DESKTOP-NPQN816" or socket.gethostname()=="Ananya-PC" or socket.gethostname()=="DESKTOP-CDJ0JAR"):
     DEBUG = True
 
-ALLOWED_HOSTS = ['www.visatonewzealand.com','visatonewzealand.com','127.0.0.1']
+ALLOWED_HOSTS = ['www.visatonewzealand.com','visatonewzealand.com','127.0.0.1', 'visa-to-newzealand.herokuapp.com']
 
 #Recaptch key
 GOOGLE_RECAPTCHA_SECRET_KEY = env('RECAPTCHA_KEY')
@@ -130,3 +131,6 @@ import os.path
 STATIC_URL = '/static/'
 STATIC_FILES_DIRS = (os.path.join('static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
