@@ -29,7 +29,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = '!!924ic&0i6$3e0z4wior@&6ly-t9(^^t$(mt*d-njqi80k=fd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 if(socket.gethostname()=="DESKTOP-NPQN816" or socket.gethostname()=="Ananya-PC" or socket.gethostname()=="DESKTOP-CDJ0JAR"):
     DEBUG = True
 
